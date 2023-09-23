@@ -1,0 +1,9 @@
+﻿@model NwindMVC.Models.CustomerIdsViewModel
+<div>
+	<h4>CustomerIds</h4>
+	<hr />
+	<form asp-asp-controller="Customer" method="post" asp-action="Details">
+		<select asp-for="Id" asp-items="Model.CustomerIdsSelectedList"></select>
+		<button type="submit">Details</button>
+	</form>
+</div>

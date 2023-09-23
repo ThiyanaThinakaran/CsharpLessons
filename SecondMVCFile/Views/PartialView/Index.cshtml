@@ -1,0 +1,17 @@
+﻿<h1>INDEX</h1>
+@{
+    var all_route_parms = new Dictionary<string, string>
+    {
+    {"x","200"},{"y","50"}
+    };
+}
+<!--razor helper-->
+<div>
+    <a asp-action="Add" asp-controller="Calculator"
+    asp_route-x="258" asp-route-y="6">CallAdd asp-route</a>
+</div>
+<div>
+    <a asp-action="Add" asp-controller="Calculator"
+       asp-all-route-data="all_route_parms"> CallAdd all_route_parms</a>
+</div>
+@await Html.PartialAsync("ChildList")
